@@ -10,12 +10,12 @@ However we do still sign our Kernel with a self-signed certificate. So after man
 2. Download `TUXEDO_Computers_GmbH_Secure_Boot_Signing.crt`
 3. Make sure the download is correct and not corrupted
 ```
-$ sha512sum TUXEDO_Computers_GmbH_Secure_Boot_Signing.crt
+sha512sum TUXEDO_Computers_GmbH_Secure_Boot_Signing.crt
 13887887159754640c69b4e270c7ccd89f6e06bae9f8addc91708cf93ce3fd565f712b8c7acaf0444c5da30aae2dfe0941b71c228a6bdd20facd28529c0aaa62  TUXEDO_Computers_GmbH_Secure_Boot_Signing.crt
 ```
 4. Import certificate as a Machine Owner Key (MOK)
 ```
-$ sudo mokutil --import TUXEDO_Computers_GmbH_Secure_Boot_Signing.crt
+sudo mokutil --import TUXEDO_Computers_GmbH_Secure_Boot_Signing.crt
 ```
 5. Provide sudo password
 6. Provide one time password for mokutil
